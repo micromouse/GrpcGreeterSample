@@ -1,2 +1,2 @@
 # GrpcGreeterSample
-Grpc简单例子
+GrpcGreeterSample简单例子
