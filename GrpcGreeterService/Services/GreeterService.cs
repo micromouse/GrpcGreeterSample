@@ -15,7 +15,7 @@ namespace GrpcGreeterService {
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context) {
             _logger.LogWarning("正在执行SayHello,{@request}", request);
             return Task.FromResult(new HelloReply {
-                Message = "Hello " + request.Name
+                Message = "来自于服务器端的回应:" + request.Name
             });
         }
     }
