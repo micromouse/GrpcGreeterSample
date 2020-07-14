@@ -6,16 +6,18 @@ package MyLibrary.Greet;
 
 // The greeting service definition.
 service LibraryGreeter {
-  // Sends a greeting
-  rpc SayHello (LibraryHelloRequest) returns (LibraryHelloReply);
+	// Sends a greeting
+	rpc SayHello (LibraryHelloRequest) returns (LibraryHelloReply);
 }
 
 // The request message containing the user's name.
 message LibraryHelloRequest {
-  string name = 1;
+	//用户名
+	string name = 1;
 }
 
 // The response message containing the greetings.
 message LibraryHelloReply {
-  string message = 1;
+	//消息
+	string message = 1;
 }

@@ -81,6 +81,9 @@ namespace Library.GrpcGreeterService {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    ///用户名
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
@@ -213,6 +216,9 @@ namespace Library.GrpcGreeterService {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
+    /// <summary>
+    ///消息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
