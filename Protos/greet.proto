@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "GrpcGreeterService";
+option csharp_namespace = "FileGrpcGreeterService";
 
 package Greet;
 

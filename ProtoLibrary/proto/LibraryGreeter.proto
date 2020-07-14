@@ -1,21 +1,21 @@
 syntax = "proto3";
 
-option csharp_namespace = "GrpcGreeterService";
+option csharp_namespace = "Library.GrpcGreeterService";
 
-package Greet;
+package MyLibrary.Greet;
 
 // The greeting service definition.
-service Greeter {
+service LibraryGreeter {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc SayHello (LibraryHelloRequest) returns (LibraryHelloReply);
 }
 
 // The request message containing the user's name.
-message HelloRequest {
+message LibraryHelloRequest {
   string name = 1;
 }
 
 // The response message containing the greetings.
-message HelloReply {
+message LibraryHelloReply {
   string message = 1;
 }
