@@ -3,13 +3,12 @@ using Library.GrpcGreeterService;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
-using static Library.GrpcGreeterService.LibraryGreeterService;
 
 namespace GrpcGreeterService.Services {
     /// <summary>
     /// 引用类库Greeter服务
     /// </summary>
-    public class MyLibraryGreeterService : LibraryGreeterServiceBase {
+    public class MyLibraryGreeterService : LibraryGreeterService.LibraryGreeterServiceBase {
         private readonly ILogger<MyLibraryGreeterService> _logger;
 
         /// <summary>
