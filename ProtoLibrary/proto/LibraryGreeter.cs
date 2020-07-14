@@ -42,7 +42,7 @@ namespace Library.GrpcGreeterService {
   }
   #region Messages
   /// <summary>
-  /// The request message containing the user's name.
+  /// 类库Hello请求
   /// </summary>
   public sealed partial class LibraryHelloRequest : pb::IMessage<LibraryHelloRequest> {
     private static readonly pb::MessageParser<LibraryHelloRequest> _parser = new pb::MessageParser<LibraryHelloRequest>(() => new LibraryHelloRequest());
@@ -177,7 +177,7 @@ namespace Library.GrpcGreeterService {
   }
 
   /// <summary>
-  /// The response message containing the greetings.
+  /// 类库Hello请求响应
   /// </summary>
   public sealed partial class LibraryHelloReply : pb::IMessage<LibraryHelloReply> {
     private static readonly pb::MessageParser<LibraryHelloReply> _parser = new pb::MessageParser<LibraryHelloReply>(() => new LibraryHelloReply());

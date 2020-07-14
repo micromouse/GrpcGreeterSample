@@ -9,7 +9,7 @@ using grpc = global::Grpc.Core;
 
 namespace Library.GrpcGreeterService {
   /// <summary>
-  /// The greeting service definition.
+  /// Àà¿âGreeter·þÎñ
   /// </summary>
   public static partial class LibraryGreeterService
   {

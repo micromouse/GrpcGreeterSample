@@ -4,19 +4,19 @@ option csharp_namespace = "Library.GrpcGreeterService";
 
 package MyLibrary.Greet;
 
-// The greeting service definition.
+// 类库Greeter服务
 service LibraryGreeterService {
 	// Sends a greeting
 	rpc SayHello (LibraryHelloRequest) returns (LibraryHelloReply);
 }
 
-// The request message containing the user's name.
+// 类库Hello请求
 message LibraryHelloRequest {
 	//用户名
 	string name = 1;
 }
 
-// The response message containing the greetings.
+// 类库Hello请求响应
 message LibraryHelloReply {
 	//消息
 	string message = 1;
