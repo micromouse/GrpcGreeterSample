@@ -11,9 +11,9 @@ namespace Library.GrpcGreeterService {
   /// <summary>
   /// The greeting service definition.
   /// </summary>
-  public static partial class LibraryGreeter
+  public static partial class LibraryGreeterService
   {
-    static readonly string __ServiceName = "MyLibrary.Greet.LibraryGreeter";
+    static readonly string __ServiceName = "MyLibrary.Greet.LibraryGreeterService";
 
     static readonly grpc::Marshaller<global::Library.GrpcGreeterService.LibraryHelloRequest> __Marshaller_MyLibrary_Greet_LibraryHelloRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Library.GrpcGreeterService.LibraryHelloRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Library.GrpcGreeterService.LibraryHelloReply> __Marshaller_MyLibrary_Greet_LibraryHelloReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Library.GrpcGreeterService.LibraryHelloReply.Parser.ParseFrom);
@@ -31,9 +31,9 @@ namespace Library.GrpcGreeterService {
       get { return global::Library.GrpcGreeterService.LibraryGreeterReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of LibraryGreeter</summary>
-    [grpc::BindServiceMethod(typeof(LibraryGreeter), "BindService")]
-    public abstract partial class LibraryGreeterBase
+    /// <summary>Base class for server-side implementations of LibraryGreeterService</summary>
+    [grpc::BindServiceMethod(typeof(LibraryGreeterService), "BindService")]
+    public abstract partial class LibraryGreeterServiceBase
     {
       /// <summary>
       /// Sends a greeting
@@ -48,26 +48,26 @@ namespace Library.GrpcGreeterService {
 
     }
 
-    /// <summary>Client for LibraryGreeter</summary>
-    public partial class LibraryGreeterClient : grpc::ClientBase<LibraryGreeterClient>
+    /// <summary>Client for LibraryGreeterService</summary>
+    public partial class LibraryGreeterServiceClient : grpc::ClientBase<LibraryGreeterServiceClient>
     {
-      /// <summary>Creates a new client for LibraryGreeter</summary>
+      /// <summary>Creates a new client for LibraryGreeterService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public LibraryGreeterClient(grpc::ChannelBase channel) : base(channel)
+      public LibraryGreeterServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for LibraryGreeter that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for LibraryGreeterService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public LibraryGreeterClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public LibraryGreeterServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected LibraryGreeterClient() : base()
+      protected LibraryGreeterServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected LibraryGreeterClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected LibraryGreeterServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -116,15 +116,15 @@ namespace Library.GrpcGreeterService {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override LibraryGreeterClient NewInstance(ClientBaseConfiguration configuration)
+      protected override LibraryGreeterServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new LibraryGreeterClient(configuration);
+        return new LibraryGreeterServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(LibraryGreeterBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(LibraryGreeterServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
@@ -134,7 +134,7 @@ namespace Library.GrpcGreeterService {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, LibraryGreeterBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, LibraryGreeterServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.GrpcGreeterService.LibraryHelloRequest, global::Library.GrpcGreeterService.LibraryHelloReply>(serviceImpl.SayHello));
     }

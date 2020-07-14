@@ -5,7 +5,7 @@ option csharp_namespace = "Library.GrpcGreeterService";
 package MyLibrary.Greet;
 
 // The greeting service definition.
-service LibraryGreeter {
+service LibraryGreeterService {
 	// Sends a greeting
 	rpc SayHello (LibraryHelloRequest) returns (LibraryHelloReply);
 }

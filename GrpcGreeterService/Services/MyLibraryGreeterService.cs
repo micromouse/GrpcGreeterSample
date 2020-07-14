@@ -3,19 +3,19 @@ using Library.GrpcGreeterService;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
-using static Library.GrpcGreeterService.LibraryGreeter;
+using static Library.GrpcGreeterService.LibraryGreeterService;
 
 namespace GrpcGreeterService.Services {
     /// <summary>
     /// 引用类库Greeter服务
     /// </summary>
-    public class LibraryGreeterService : LibraryGreeterBase {
-        private readonly ILogger<LibraryGreeterService> _logger;
+    public class MyLibraryGreeterService : LibraryGreeterServiceBase {
+        private readonly ILogger<MyLibraryGreeterService> _logger;
 
         /// <summary>
         /// 初始化引用类库Greeter服务
         /// </summary>
-        public LibraryGreeterService(ILogger<LibraryGreeterService> logger) {
+        public MyLibraryGreeterService(ILogger<MyLibraryGreeterService> logger) {
             _logger = logger;
         }
 

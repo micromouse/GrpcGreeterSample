@@ -26,10 +26,10 @@ namespace Library.GrpcGreeterService {
           string.Concat(
             "Chpwcm90by9MaWJyYXJ5R3JlZXRlci5wcm90bxIPTXlMaWJyYXJ5LkdyZWV0",
             "IiMKE0xpYnJhcnlIZWxsb1JlcXVlc3QSDAoEbmFtZRgBIAEoCSIkChFMaWJy",
-            "YXJ5SGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMmYKDkxpYnJhcnlHcmVl",
-            "dGVyElQKCFNheUhlbGxvEiQuTXlMaWJyYXJ5LkdyZWV0LkxpYnJhcnlIZWxs",
-            "b1JlcXVlc3QaIi5NeUxpYnJhcnkuR3JlZXQuTGlicmFyeUhlbGxvUmVwbHlC",
-            "HaoCGkxpYnJhcnkuR3JwY0dyZWV0ZXJTZXJ2aWNlYgZwcm90bzM="));
+            "YXJ5SGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMm0KFUxpYnJhcnlHcmVl",
+            "dGVyU2VydmljZRJUCghTYXlIZWxsbxIkLk15TGlicmFyeS5HcmVldC5MaWJy",
+            "YXJ5SGVsbG9SZXF1ZXN0GiIuTXlMaWJyYXJ5LkdyZWV0LkxpYnJhcnlIZWxs",
+            "b1JlcGx5Qh2qAhpMaWJyYXJ5LkdycGNHcmVldGVyU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

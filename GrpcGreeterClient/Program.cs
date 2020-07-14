@@ -33,7 +33,7 @@ namespace GrpcGreeterClient {
         private static async Task ExecuteLibraryGrpcService() {
             AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
             var channel = GrpcChannel.ForAddress("http://localhost:5001");
-            var client = new LibraryGreeter.LibraryGreeterClient(channel);
+            var client = new LibraryGreeterService.LibraryGreeterServiceClient(channel);
             var reply = await client.SayHelloAsync(new LibraryHelloRequest { Name = "Library Greeter Client" });
             Console.WriteLine($"Library Greeting Reply:{reply.Message}");
         }
