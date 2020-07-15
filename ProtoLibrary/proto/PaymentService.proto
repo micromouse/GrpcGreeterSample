@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+option csharp_namespace = "LingYing.GrpcService";
+package LingYing.GrpcService;
+
+//付款请求
+message PaymentRequest {
+	//付款金额
+	float PaymentAmount = 1;
+	//付款人
+	repeated string Payer = 2;
+	//说明
+	string Remark = 3;
+}
+
+//付款响应
+message PaymentResponse {
+	//付款状态
+	int32 Status = 1;
+	//消息
+	string Message = 2;
+}
+
+//付款服务
+service PaymentService {
+	//付款
+	rpc Payment(PaymentRequest) returns(PaymentResponse);
+}

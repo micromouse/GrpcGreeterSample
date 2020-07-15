@@ -14,6 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="**/*.proto" OutputDir="%(RelativeDir)" CompileOutputs="false" />
+    <Protobuf Include="**/*.proto" />
   </ItemGroup>
 </Project>

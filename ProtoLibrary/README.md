@@ -8,9 +8,16 @@ Install-Package Google.Protobuf
 ```
 
 ### 2.编辑.csproj文件
+- 生成.cs资产文件在.proto文件夹
 ```c#
   <ItemGroup>
     <Protobuf Include="**/*.proto" OutputDir="%(RelativeDir)" CompileOutputs="false" />
+  </ItemGroup>
+```
+- 生成.cs资产文件在obj文件夹,最后编译到dll库文件
+```c#
+  <ItemGroup>
+    <Protobuf Include="**/*.proto" />
   </ItemGroup>
 ```
 
